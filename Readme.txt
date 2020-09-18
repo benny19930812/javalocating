@@ -1,0 +1,2 @@
+import專案到java IDE後，Build Path設定增加lib內的兩個jar
+hihi
