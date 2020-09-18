@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- IE8 -->
+    <!-- <h1 onclick="f1();">method 1</h1>
+    <h1 id="m2">method 2</h1>
+    <script>
+        //IE8 
+        document.querySelector("#m2").onclick=f2;
+        function f1(){
+            console.log(event);
+            console.log(event.type);
+        }
+        function f2(){
+            console.log(event);
+            console.log(event.type);
+        }
+    </script> -->
+
+    <!-- Firefox -->
+    <h1 onclick="f1(event);">method 1</h1>
+    <h1 id="m2">method 2</h1>
+    <h1 id="m3">jQuery event</h1>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script>
+        //firefox 
+        // document.querySelector("#m2").onclick=f2;
+        function f1(evt){
+            console.log(evt);
+            console.log(evt.type);
+        }
+        // function f2(evt){
+        //     console.log(evt);
+        //     console.log(evt.type);
+        // }
+
+        document.querySelector("#m2").onclick=function (evt){
+            console.log(evt);
+            console.log(evt.type);
+        };
+
+        $("#m3").click(function(abc){
+            console.log(abc)
+        })
+    </script>
+</body>
+</html>
